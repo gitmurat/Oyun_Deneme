@@ -30,13 +30,18 @@ namespace Dinozorlar
                 Console.WriteLine("Round: " + i + " Beginning");
                 Console.WriteLine("");
                 Console.WriteLine("----------------------------");
+                Console.WriteLine("");
                 Console.WriteLine("Number of T-Rexes = " + rex1.HowMany);
                 Console.WriteLine("Number of Raptors = " + raptor1.HowMany);
                 Console.WriteLine("Health of T-Rex = " + rex1.Health);
                 Console.WriteLine("Health of Raptors = " + raptor1.Health);
+                Console.WriteLine("");
                 Console.WriteLine("----------------------------");
                 Console.WriteLine("Would you like to end the turn? Y/N");
                 answer = Console.ReadLine();
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine( "Round " + i + " Results");
                 Console.WriteLine("----------------------------");
@@ -66,8 +71,6 @@ namespace Dinozorlar
                         raptor1.Health = 200;
                     }
 
-                    
-
                     Console.WriteLine("Number of T-Rexes after Hunt = " + rex1.HowMany);
                     Console.WriteLine("T-Rex Health: " + rex1.Health);
                     Console.WriteLine("Number of Raptors after Hunt = " + raptor1.HowMany);
@@ -75,39 +78,6 @@ namespace Dinozorlar
                     Console.WriteLine("----------------------------");
                     Console.WriteLine("");
                     Console.WriteLine("");
-
-                    /*NewHealth = raptor1.Hunt(raptor1, rex1);
-                    raptor1.Health = NewHealth[0];
-                    rex1.Health = NewHealth[1];
-                    if (raptor1.Health <= 0)
-                    {
-                        raptor1.HowMany -= 1;
-                        Console.WriteLine(raptor1.HowMany);
-                        Console.WriteLine(raptor1.Health);
-                        raptor1.Health = 200;
-                    }
-                    else 
-                    { Console.WriteLine(raptor1.HowMany); }
-                    { Console.WriteLine(raptor1.Health); }
-
-                    if (rex1.Health <= 0)
-                    {
-                        rex1.HowMany -= 1;
-                        Console.WriteLine(rex1.HowMany);
-                        Console.WriteLine(rex1.Health);
-                        rex1.Health = 350;
-                    }
-
-                    else 
-                    {
-                        Console.WriteLine(raptor1.HowMany);
-                        Console.WriteLine(raptor1.Health);
-                    }
-                    
-                    Console.WriteLine("Number of T-Rexes after Hunt = " + raptor1.HowMany);
-                    Console.WriteLine("Number of Raptors after Hunt = " + rex1.HowMany);
-                    Console.WriteLine("---------------------------------");*/
-
                 }
 
 
