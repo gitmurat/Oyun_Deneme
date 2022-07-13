@@ -13,9 +13,32 @@ namespace Dinozorlar
         public abstract string livesIn { get; }
         public abstract bool CanFly { get; }
         public abstract bool CanSwim { get; }
-        public abstract int Health { get; set; }
-        
-        public abstract int Strength { get; }
+
+        private int _Health { get; set; }
+        public int Health
+        {
+            get
+            {
+                return _Health;
+            }
+            set
+            {
+                _Health = value;
+            }
+        }
+        private int _Strength { get; set; }
+        public int Strength
+        {
+            get
+            {
+                return _Strength;
+            }
+            set
+            {
+                _Strength = value;
+            }
+        }
+
         public abstract bool ResAcid { get; }
         public abstract bool ResCold { get; }
         public abstract bool ResHeat { get; }
@@ -45,14 +68,13 @@ namespace Dinozorlar
             int[] healths = new int[2];
             if (dino1.Health > 0 && dino2.Health > 0)
             {
-                while (dino1.Health > 0 || dino2.Health> 0)
+                while (dino1.Health > 0 && dino2.Health > 0)
                 {
-                    dino1.Health -= dino2.Strength;
-                    dino2.Health -= dino1.Strength;
-
-                    healths[0] = dino1.Health;
-                    healths[1] = dino2.Health;
+                    dino1.Health = dino1.Health - dino2.Strength;
+                    dino2.Health = dino2.Health - dino1.Strength;
                 }
+                healths[0] = dino1.Health;
+                healths[1] = dino2.Health;
                 return healths;
             }
             
