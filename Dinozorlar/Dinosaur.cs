@@ -13,7 +13,6 @@ namespace Dinozorlar
         public abstract string livesIn { get; }
         public abstract bool CanFly { get; }
         public abstract bool CanSwim { get; }
-
         private int _Health { get; set; }
         public int Health
         {
