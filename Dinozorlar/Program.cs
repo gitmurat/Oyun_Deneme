@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace Dinozorlar
 {
+    
     internal class Program
     {
+        static void TurnResults(int round)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Round " + round + " Results");
+            Console.WriteLine("----------------------------");
+        }
+
         static void Main(string[] args)
         {
             string answer = "";
@@ -28,23 +39,13 @@ namespace Dinozorlar
             for (int i = 0; i < 200; i++)
             {
                 Console.WriteLine("Round: " + i + " Beginning");
-                Console.WriteLine("");
-                Console.WriteLine("----------------------------");
-                Console.WriteLine("");
-                Console.WriteLine("Number of T-Rexes = " + rex1.HowMany);
-                Console.WriteLine("Number of Raptors = " + raptor1.HowMany);
-                Console.WriteLine("Health of T-Rex = " + rex1.Health);
-                Console.WriteLine("Health of Raptors = " + raptor1.Health);
-                Console.WriteLine("");
-                Console.WriteLine("----------------------------");
+                rex1.Status();
+                raptor1.Status();
                 Console.WriteLine("Would you like to end the turn? Y/N");
                 answer = Console.ReadLine();
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine( "Round " + i + " Results");
-                Console.WriteLine("----------------------------");
+                
+                TurnResults(i);
+
                 int[] NewHealth;
                 if (answer == "Y")
                 {

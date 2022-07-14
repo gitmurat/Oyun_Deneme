@@ -48,7 +48,17 @@ namespace Dinozorlar
         
         public abstract int HowMany { get; set; }
         
+        public void Status ()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Number of " + Type + ": " + HowMany);
+            Console.WriteLine("Health of " + Type + ": " + Health);
+            Console.WriteLine("Strenght of " + Type + ": " + Strength);
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------");
+        }
         
+
         public int Procreate(Dinosaur dino1)
         {
             if (dino1.HowMany > 1)
