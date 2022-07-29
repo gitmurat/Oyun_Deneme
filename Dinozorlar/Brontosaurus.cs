@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace Dinozorlar
 {
-    internal class TRex : Dinosaur
+    internal class Brontosaurus : Dinosaur
     {
-        public override string Type => "T-Rex";
+        public override string Type => "Brontosaurus";
         public override string livesIn => "Land";
         public override bool CanFly => false;
         public override bool CanSwim => false;
         public override bool IsCarnivore => true;
 
-
         public override int MaxHealth
         {
             get
-            { return 350; }
-            
+            { return 850; }
+
         }
 
-        public override bool ResAcid =>false;
+        public override bool ResAcid => false;
         public override bool ResCold => false;
         public override bool ResHeat => false;
         public override bool IsPoisoned => false;
@@ -32,8 +31,7 @@ namespace Dinozorlar
         public override int HowMany
         {
             get { return _HowMany; }
-            set { _HowMany = value; } 
+            set { _HowMany = value; }
         }
     }
 }
-

@@ -12,8 +12,15 @@ namespace Dinozorlar
         public override string livesIn => "Land";
         public override bool CanFly => false;
         public override bool CanSwim => false;
-        
-        
+        public override bool IsCarnivore => true;
+
+        public override int MaxHealth
+        {
+            get
+            { return 200; }
+        }
+
+
         public override bool ResAcid => false;
         public override bool ResCold => false;
         public override bool ResHeat => false;
